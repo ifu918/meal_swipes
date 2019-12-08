@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_match/:id_to_remove", { :controller => "matches", :action => "destroy_row" })
+  get("/delete_match_from_creator/:id_to_remove", { :controller => "matches", :action => "destroy_row_from_creator" })
 
   #------------------------------
 
