@@ -1,4 +1,6 @@
 ActiveAdmin.register Match do
+
+ permit_params :seller, :buyer, :dining_hall, :price, :meeting_time
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
