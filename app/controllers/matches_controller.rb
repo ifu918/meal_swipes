@@ -10,7 +10,7 @@ class MatchesController < ApplicationController
   end
 
   def index
-    @matches = Match.all
+    @matches = Match.page(params[:page]).per(10)
 
     render("match_templates/index.html.erb")
   end
