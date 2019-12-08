@@ -11,7 +11,6 @@
         </a>
       </div>
 
-      <!-- Edit link match start -->
       <div class="col">
         <% if current_user == @match.creator %>
           <a href="/matches/<%= @match.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
@@ -19,9 +18,7 @@
           </a>
         <% end %>
       </div>
-      <!-- Edit link match end -->
 
-      <!-- Delete link match start -->
       <div class="col">
         <% if current_user == @match.creator %>
           <a href="/delete_match/<%= @match.id %>" class="btn btn-block btn-sm btn-outline-secondary">
@@ -29,14 +26,12 @@
           </a>
         <% end %>
       </div>
-      <!-- Delete link match end -->
     </div>
 
     <dl>
       <dt>
         Seller
       </dt>
-      <!-- Display seller start -->
       <dd>
         <% if @match.creator.present? %>
           <a href="/users/<%= @match.seller %>">
@@ -44,64 +39,49 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display seller end -->
 
       <dt>
         Buyer
       </dt>
-      <!-- Display buyer start -->
       <dd>
         <%= @match.buyer %>
       </dd>
-      <!-- Display buyer end -->
 
       <dt>
         Dining hall
       </dt>
-      <!-- Display dining_hall start -->
       <dd>
         <%= @match.dining_hall %>
       </dd>
-      <!-- Display dining_hall end -->
 
       <dt>
         Price
       </dt>
-      <!-- Display price start -->
       <dd>
         <%= @match.price %>
       </dd>
-      <!-- Display price end -->
 
       <dt>
         Meeting time
       </dt>
-      <!-- Display meeting_time start -->
       <dd>
         <%= @match.meeting_time %>
       </dd>
-      <!-- Display meeting_time end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@match.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@match.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

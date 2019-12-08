@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @match.errors.any? %>
   <% @match.errors.full_messages.each do |message| %>
     <div class="alert">
@@ -13,60 +12,40 @@
 
 <hr>
 
-<!-- Form match start -->
 <form action="/update_match/<%= @match.id %>" method="post">
-<!-- Form match end -->
 
-  <!-- Label and input for seller start -->
-  <!-- Label and input for seller end -->
 
-  <!-- Label and input for buyer start -->
   <div class="form-group">
     <label for="buyer">
       Buyer
     </label>
 
-    <!-- Input for buyer start -->
     <input type="text" id="buyer" name="buyer" class="form-control" value="<%= @match.buyer %>">
-    <!-- Input for buyer end -->
   </div>
-  <!-- Label and input for buyer end -->
 
-  <!-- Label and input for dining_hall start -->
   <div class="form-group">
     <label for="dining_hall">
       Dining hall
     </label>
 
-    <!-- Input for dining_hall start -->
     <input type="text" id="dining_hall" name="dining_hall" class="form-control" value="<%= @match.dining_hall %>">
-    <!-- Input for dining_hall end -->
   </div>
-  <!-- Label and input for dining_hall end -->
 
-  <!-- Label and input for price start -->
   <div class="form-group">
     <label for="price">
       Price
     </label>
 
-    <!-- Input for price start -->
     <input type="text" id="price" name="price" class="form-control" value="<%= @match.price %>">
-    <!-- Input for price end -->
   </div>
-  <!-- Label and input for price end -->
 
-  <!-- Label and input for meeting_time start -->
   <div class="form-group">
     <label for="meeting_time">
       Meeting time
     </label>
 
-    <!-- Input for meeting_time start -->
     <input type="text" id="meeting_time" name="meeting_time" class="form-control" value="<%= @match.meeting_time %>">
-    <!-- Input for meeting_time end -->
   </div>
-  <!-- Label and input for meeting_time end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update match
