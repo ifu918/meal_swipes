@@ -1,6 +1,10 @@
 class User < ApplicationRecord
   # Direct associations
 
+  has_many   :matches,
+             :foreign_key => "seller",
+             :dependent => :destroy
+
   # Indirect associations
 
   # Validations
