@@ -44,7 +44,7 @@ class MatchesController < ApplicationController
   def update_row
     @match = Match.find(params.fetch("id_to_modify"))
 
-    @match.seller = params.fetch("seller")
+    
     @match.buyer = params.fetch("buyer")
     @match.dining_hall = params.fetch("dining_hall")
     @match.price = params.fetch("price")

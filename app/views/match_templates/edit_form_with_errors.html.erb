@@ -18,15 +18,6 @@
 <!-- Form match end -->
 
   <!-- Label and input for seller start -->
-  <div class="form-group">
-    <label for="seller">
-      Seller
-    </label>
-
-    <!-- Input for seller start -->
-    <%= select_tag(:seller, options_from_collection_for_select(User.all, :id, :email, @match.seller), :class => "form-control") %>
-    <!-- Input for seller end -->
-  </div>
   <!-- Label and input for seller end -->
 
   <!-- Label and input for buyer start -->
