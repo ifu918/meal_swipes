@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "matches#index"
   # Routes for the Match resource:
 
   # CREATE
