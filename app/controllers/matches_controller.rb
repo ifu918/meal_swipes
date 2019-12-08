@@ -10,7 +10,8 @@ class MatchesController < ApplicationController
   end
 
   def index
-    @matches = Match.page(params[:page]).per(10)
+    @q = Match.ransack(params[:q])
+    @matches = @q.result(:distinct => true).includes(:creator).page(params[:page]).per(10)
 
     render("match_templates/index.html.erb")
   end
