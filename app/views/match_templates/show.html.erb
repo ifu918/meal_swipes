@@ -38,7 +38,11 @@
       </dt>
       <!-- Display seller start -->
       <dd>
-        <%= @match.seller %>
+        <% if @match.creator.present? %>
+          <a href="/users/<%= @match.seller %>">
+            <%= @match.creator.email %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display seller end -->
 

@@ -70,7 +70,11 @@
 
         <!-- Display match.seller start -->
         <td>
-          <%= match.creator.email %>
+          <% if match.creator.present? %>
+            <a href="/users/<%= match.creator.id %>">
+              <%= match.creator.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display match.seller end -->
 
