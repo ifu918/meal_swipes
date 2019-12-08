@@ -13,17 +13,21 @@
 
       <!-- Edit link match start -->
       <div class="col">
-        <a href="/matches/<%= @match.id %>/edit" class="btn btn-block btn-outline-secondary">
-          Edit match
-        </a>
+        <% if current_user == @match.creator %>
+          <a href="/matches/<%= @match.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
+            Edit match
+          </a>
+        <% end %>
       </div>
       <!-- Edit link match end -->
 
       <!-- Delete link match start -->
       <div class="col">
-        <a href="/delete_match/<%= @match.id %>" class="btn btn-block btn-outline-secondary">
-          Delete match
-        </a>
+        <% if current_user == @match.creator %>
+          <a href="/delete_match/<%= @match.id %>" class="btn btn-block btn-sm btn-outline-secondary">
+            Delete match
+          </a>
+        <% end %>
       </div>
       <!-- Delete link match end -->
     </div>
